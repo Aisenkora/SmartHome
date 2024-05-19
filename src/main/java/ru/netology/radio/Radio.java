@@ -2,8 +2,9 @@ package ru.netology.radio;
 
 public class Radio {
 
-    public int currentNumber;
-    public int currentVolume;
+
+    private int currentNumber;
+    private int currentVolume;
 
     public int getCurrentNumber() {
         return currentNumber;
@@ -21,23 +22,16 @@ public class Radio {
         currentNumber = newCurrentNumber;
     }
 
-    public void setNextNumber(int newCurrentNumber) {
-        if (newCurrentNumber < 9) {
-            newCurrentNumber = newCurrentNumber + 1;
-        } else {
-            newCurrentNumber = 0;
-
-        }
-        currentNumber = newCurrentNumber;
+    public void setNextNumber() {
+        if (currentNumber < 9) {
+            currentNumber = currentNumber + 1;
+        } else currentNumber = 0;
     }
 
-    public void setPrevNumber(int newCurrentNumber) {
-        if (newCurrentNumber > 0) {
-            newCurrentNumber = newCurrentNumber - 1;
-        } else {
-            newCurrentNumber = 9;
-        }
-        currentNumber = newCurrentNumber;
+    public void setPrevNumber() {
+        if (currentNumber > 0) {
+            currentNumber = currentNumber - 1;
+        } else currentNumber = 9;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
@@ -48,22 +42,15 @@ public class Radio {
         currentVolume = newCurrentVolume;
     }
 
-    public void setNextVolume(int newCurrentVolume) {
-        if (newCurrentVolume < 100) {
-            newCurrentVolume = newCurrentVolume + 1;
-        } else {
-            newCurrentVolume = 0;
-
-        }
-        currentVolume = newCurrentVolume;
+    public void setNextVolume() {
+        if (currentVolume < 100) {
+            currentVolume = currentVolume + 1;
+        } else currentVolume = 0;
     }
 
-    public void setPrevVolume(int newCurrentVolume) {
-        if (newCurrentVolume > 0) {
-            newCurrentVolume = newCurrentVolume - 1;
-        } else {
-            newCurrentVolume = 0;
+    public void setPrevVolume() {
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
         }
-        currentVolume = newCurrentVolume;
     }
 }
