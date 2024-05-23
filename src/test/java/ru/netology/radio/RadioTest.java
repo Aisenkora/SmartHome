@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
-    public void test() {
+    public void shouldGetNumber() {
         Radio number = new Radio(10);
 
         Assertions.assertEquals(0, number.getMinNumber());
